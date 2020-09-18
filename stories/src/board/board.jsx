@@ -79,6 +79,7 @@ export default class Board extends Component<Props, State> {
     }
 
     const source: DraggableLocation = result.source;
+    debugger;
     const destination: DraggableLocation = result.destination;
 
     // did not move anywhere - can bail early
@@ -118,6 +119,7 @@ export default class Board extends Component<Props, State> {
   render() {
     const columns: QuoteMap = this.state.columns;
     const ordered: string[] = this.state.ordered;
+    // debugger;
     const {
       containerHeight,
       useClone,

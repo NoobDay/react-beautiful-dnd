@@ -43,8 +43,9 @@ export default function Draggable(props: Props) {
       index: props.index,
       type,
       droppableId,
+      dragPayload: props.dragPayload,
     }),
-    [props.draggableId, props.index, type, droppableId],
+    [props.draggableId, props.index, type, droppableId, props.dragPayload],
   );
 
   // props
@@ -56,6 +57,7 @@ export default function Draggable(props: Props) {
     shouldRespectForcePress,
     canDragInteractiveElements,
     isClone,
+    dragPayload,
 
     // mapProps
     mapped,
@@ -162,9 +164,16 @@ export default function Draggable(props: Props) {
       source: {
         index: descriptor.index,
         droppableId: descriptor.droppableId,
+        dragPayload,
       },
     }),
-    [descriptor.droppableId, descriptor.id, descriptor.index, descriptor.type],
+    [
+      descriptor.droppableId,
+      descriptor.id,
+      descriptor.index,
+      descriptor.type,
+      dragPayload,
+    ],
   );
 
   return children(provided, mapped.snapshot, rubric);

@@ -44,8 +44,13 @@ export default class Column extends Component<Props> {
     const title: string = this.props.title;
     const quotes: Quote[] = this.props.quotes;
     const index: number = this.props.index;
+    // debugger;
     return (
-      <Draggable draggableId={title} index={index}>
+      <Draggable
+        draggableId={title}
+        index={index}
+        dragPayload={{ columnId: '522d2fs22df2s2fd2s' }}
+      >
         {(provided: DraggableProvided, snapshot: DraggableStateSnapshot) => (
           <Container ref={provided.innerRef} {...provided.draggableProps}>
             <Header isDragging={snapshot.isDragging}>

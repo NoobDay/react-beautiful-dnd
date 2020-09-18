@@ -26,6 +26,7 @@ export function PrivateDraggable(props: PrivateOwnProps) {
 
 // What we give to consumers
 export function PublicDraggable(props: PublicOwnProps) {
+  console.log(props.dragPayload, props.draggableId);
   // default values for props
   const isEnabled: boolean =
     typeof props.isDragDisabled === 'boolean' ? !props.isDragDisabled : true;

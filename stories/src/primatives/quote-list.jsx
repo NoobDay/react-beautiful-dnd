@@ -88,7 +88,12 @@ const InnerQuoteList = React.memo(function InnerQuoteList(
   props: QuoteListProps,
 ) {
   return props.quotes.map((quote: Quote, index: number) => (
-    <Draggable key={quote.id} draggableId={quote.id} index={index}>
+    <Draggable
+      key={quote.id}
+      draggableId={quote.id}
+      index={index}
+      dragPayload={{ suiviCardId: '552fsd2s2df2s2df22' }}
+    >
       {(
         dragProvided: DraggableProvided,
         dragSnapshot: DraggableStateSnapshot,

@@ -162,11 +162,11 @@ export type PublicOwnProps = {|
   draggableId: DraggableId,
   index: number,
   children: ChildrenFn,
-
   // optional own props
   isDragDisabled?: boolean,
   disableInteractiveElementBlocking?: boolean,
   shouldRespectForcePress?: boolean,
+  dragPayload?: any,
 |};
 
 export type PrivateOwnProps = {|

@@ -20,6 +20,7 @@ export type DraggableDescriptor = {|
   index: number,
   // Inherited from Droppable
   droppableId: DroppableId,
+  dragPayload?: any,
   // This is technically redundant but it avoids
   // needing to look up a parent droppable just to get its type
   type: TypeId,
@@ -152,6 +153,7 @@ export type DroppableDimension = {|
 export type DraggableLocation = {|
   droppableId: DroppableId,
   index: number,
+  dragPayload?: any,
 |};
 
 export type DraggableIdMap = {
