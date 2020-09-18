@@ -56,7 +56,7 @@ export default ({
     // when not over any list. This yielded the most consistently beautiful experience.
     return noImpact;
   }
-
+  // debugger;
   const destination: DroppableDimension = droppables[destinationId];
   const insideDestination: DraggableDimension[] = getDraggablesInsideDroppable(
     destination.descriptor.id,

@@ -184,7 +184,7 @@ export default (state: State = idle, action: Action): State => {
     if (state.phase === 'DROP_PENDING') {
       return state;
     }
-
+    // debugger;
     invariant(
       isMovementAllowed(state),
       `${action.type} not permitted in phase ${state.phase}`,

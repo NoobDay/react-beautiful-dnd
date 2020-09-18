@@ -11,6 +11,7 @@ export type ElementId = Id;
 export type DroppableMode = 'standard' | 'virtual';
 export type DroppableDescriptor = {|
   id: DroppableId,
+  dropPayload?: any,
   type: TypeId,
   mode: DroppableMode,
 |};
@@ -154,6 +155,7 @@ export type DraggableLocation = {|
   droppableId: DroppableId,
   index: number,
   dragPayload?: any,
+  dropPayload?: any,
 |};
 
 export type DraggableIdMap = {

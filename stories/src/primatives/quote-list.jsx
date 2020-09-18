@@ -150,6 +150,7 @@ export default function QuoteList(props: Props) {
     <Droppable
       droppableId={listId}
       type={listType}
+      dropPayload={{ column: listId }}
       ignoreContainerClipping={ignoreContainerClipping}
       isDropDisabled={isDropDisabled}
       isCombineEnabled={isCombineEnabled}

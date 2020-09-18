@@ -182,7 +182,7 @@ export default (registry: Registry, callbacks: Callbacks) => {
     const home: DroppableEntry = registry.droppable.getById(
       entry.descriptor.droppableId,
     );
-
+    // debugger;
     const critical: Critical = {
       draggable: entry.descriptor,
       droppable: home.descriptor,

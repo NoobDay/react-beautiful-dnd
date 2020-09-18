@@ -35,6 +35,7 @@ import useUniqueId from '../use-unique-id';
 
 type Props = {|
   droppableId: DroppableId,
+  dropPayload?: any,
   type: TypeId,
   mode: DroppableMode,
   direction: Direction,
@@ -60,14 +61,14 @@ export default function useDroppablePublisher(args: Props) {
   const uniqueId: Id = useUniqueId('droppable');
   const { registry, marshal } = appContext;
   const previousRef = usePreviousRef(args);
-
   const descriptor = useMemo<DroppableDescriptor>(
     () => ({
       id: args.droppableId,
+      dropPayload: args.dropPayload,
       type: args.type,
       mode: args.mode,
     }),
-    [args.droppableId, args.mode, args.type],
+    [args.droppableId, args.dropPayload, args.mode, args.type],
   );
   const publishedDescriptorRef = useRef<DroppableDescriptor>(descriptor);
 

@@ -5,6 +5,7 @@ import type { DraggableId, DroppableId, TypeId } from '../../types';
 export type DroppableContextValue = {|
   isUsingCloneFor: ?DraggableId,
   droppableId: DroppableId,
+  dropPayload?: any,
   type: TypeId,
 |};
 

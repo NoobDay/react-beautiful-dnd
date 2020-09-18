@@ -131,6 +131,7 @@ export default ({
   // TODO: index cannot be null?
   // otherwise return null from there and return empty impact
   // that was calculate reorder impact does not need to account for a null index
+
   return calculateReorderImpact({
     draggable,
     insideDestination,

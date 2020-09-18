@@ -78,6 +78,7 @@ export type OwnProps = {|
   children: (Provided, StateSnapshot) => Node,
   droppableId: DroppableId,
   renderClone: ?DraggableChildrenFn,
+  dropPayload?: any,
 |};
 
 export type Props = {|

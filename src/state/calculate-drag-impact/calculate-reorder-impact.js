@@ -63,6 +63,7 @@ function goAtEnd({
       type: 'REORDER',
       destination: {
         droppableId: destination.descriptor.id,
+        dropPayload: destination.descriptor.dropPayload,
         index: newIndex,
       },
     },
@@ -129,6 +130,7 @@ export default function calculateReorderImpact({
       type: 'REORDER',
       destination: {
         droppableId: destination.descriptor.id,
+        dropPayload: destination.descriptor.dropPayload,
         index,
       },
     },

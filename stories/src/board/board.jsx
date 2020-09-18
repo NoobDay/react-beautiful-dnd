@@ -130,6 +130,7 @@ export default class Board extends Component<Props, State> {
     const board = (
       <Droppable
         droppableId="board"
+        dropPayload={{ column: 'board' }}
         type="COLUMN"
         direction="horizontal"
         ignoreContainerClipping={Boolean(containerHeight)}

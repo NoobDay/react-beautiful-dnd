@@ -34,6 +34,7 @@ export default function Droppable(props: Props) {
     // own props
     children,
     droppableId,
+    dropPayload,
     type,
     mode,
     direction,
@@ -49,7 +50,7 @@ export default function Droppable(props: Props) {
     // clone (ownProps)
     getContainerForClone,
   } = props;
-
+  // debugger;
   const getDroppableRef = useCallback(
     (): ?HTMLElement => droppableRef.current,
     [],
@@ -80,6 +81,7 @@ export default function Droppable(props: Props) {
 
   useDroppablePublisher({
     droppableId,
+    dropPayload,
     type,
     mode,
     direction,
@@ -126,10 +128,11 @@ export default function Droppable(props: Props) {
   const droppableContext: ?DroppableContextValue = useMemo(
     () => ({
       droppableId,
+      dropPayload,
       type,
       isUsingCloneFor,
     }),
-    [droppableId, isUsingCloneFor, type],
+    [droppableId, dropPayload, isUsingCloneFor, type],
   );
 
   function getClone(): ?Node {
@@ -142,6 +145,7 @@ export default function Droppable(props: Props) {
       <PrivateDraggable
         draggableId={dragging.draggableId}
         index={dragging.source.index}
+        dragPayload={dragging.source.dragPayload}
         isClone
         isEnabled
         // not important as drag has already started

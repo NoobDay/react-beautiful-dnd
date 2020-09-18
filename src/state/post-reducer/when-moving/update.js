@@ -91,7 +91,7 @@ export default ({
       viewport,
       afterCritical: state.afterCritical,
     });
-
+  // console.log(newImpact, draggable);
   const withUpdatedPlaceholders: DroppableDimensionMap = recomputePlaceholders({
     draggable,
     impact: newImpact,
